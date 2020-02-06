@@ -98,8 +98,9 @@ class Bar(Chapter):
                       Now what's the play, man?? Ask Kate to go to the concert... or take your
                       chances with 'Katia'?"""))
         choice = input('Who are you going to ask? Katia or Kate?')
-        if choice == 'kate' or choice == 'Kate':
-            print(dedent("""
+        while True:
+            if choice == 'kate' or choice == 'Kate':
+                print(dedent("""
                         Walking towards the bar, you obviously shrug off Katia's stare.
 
                         You've heard stories about these women.......
@@ -107,10 +108,10 @@ class Bar(Chapter):
                         Waking up in a bathtub of ice with a kidney missing doesn't sound like a good time.
 
                         """))
-            return 'havedrink'
-        else:
-            print('*' * 30)
-            print(dedent("""
+                return 'havedrink'
+            elif choice == 'katia' or choice == 'Katia':
+                print('*' * 30)
+                print(dedent("""
                          COULD ANYONE BLAME YOU?!?!?!
 
                          I mean, just look at this woman.
@@ -118,10 +119,15 @@ class Bar(Chapter):
                          You sit down beside Katia, and happily accept the drink(s) she starts putting
                          in front of you.......
                          """))
-            print(Bar.oof[random.randint(0, 2)])
-            print('*' * 30)
-            print('*' * 30)
-            exit(1)
+                print(Bar.oof[random.randint(0, 2)])
+                print('*' * 30)
+                print('*' * 30)
+                exit(1)
+            else:
+                print('*' * 30)
+                print('woops.... you typed something just a little wrong.... try again')
+                print('*' * 30)
+                choice = input('Kate or Katia??')
 
 
 class HaveDrink(Chapter):
@@ -139,34 +145,40 @@ class HaveDrink(Chapter):
                      Or do you just wanna get going right away??
                      """))
         choice = input('have a drink? yes or no?')
-        if choice == 'yes':
-            print('*' * 30)
-            print(dedent("""
-                     You pull up a barstool and wait for Kate to come around.
-                     The bartender comes over with a drink...."Someone bought this for you."
+        while True:
+            if choice == 'yes':
+                print('*' * 30)
+                print(dedent("""
+                         You pull up a barstool and wait for Kate to come around.
+                         The bartender comes over with a drink...."Someone bought this for you."
 
-                     WELL SHIT, TODAY IS MY LUCKY DAY!!!!Without even hesitating... you take a huge sip.
+                         WELL SHIT, TODAY IS MY LUCKY DAY!!!!Without even hesitating... you take a huge sip.
 
-                     Crap.The room starts to spin.
-                     As the lights begin to fade.... you see a figure approach. KATIA.
-                     Goodnight, friend..... she whisperes.
+                         Crap.The room starts to spin.
+                         As the lights begin to fade.... you see a figure approach. KATIA.
+                         Goodnight, friend..... she whisperes.
 
-                     ....................................................
+                         ....................................................
 
-                     You come too in the front seat of Katie's car. YET AGAIN, she's done you a solid.SAVED YOUR LIFE.
-                     She kicked Katia's ass and got you on the road to the concert.
+                         You come too in the front seat of Katie's car. YET AGAIN, she's done you a solid.SAVED YOUR LIFE.
+                         She kicked Katia's ass and got you on the road to the concert.
 
-                     NEVER UNDERESTIMATE A GOOD BARTENDER!"""))
-            return 'inline'
-        else:
-            print('*' * 30)
-            print(dedent("""
-                    Kate grabs her keys and heads for the door, dragging you along.
+                         NEVER UNDERESTIMATE A GOOD BARTENDER!"""))
+                return 'inline'
+            elif choice == 'no' or choice == 'No':
+                print('*' * 30)
+                print(dedent("""
+                        Kate grabs her keys and heads for the door, dragging you along.
 
-                    LATER, FREAKS!!!!
+                        LATER, FREAKS!!!!
 
-                    and you're off"""))
-            return 'inline'
+                        and you're off"""))
+                return 'inline'
+            else:
+                print('*' * 30)
+                print('woops.... you typed something just a little wrong.... try again')
+                print('*' * 30)
+                choice = input('yes or no?')
 
 
 class InLine(Chapter):
