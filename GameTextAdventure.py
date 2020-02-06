@@ -17,11 +17,13 @@ class Engine(object):
 class Chapter(object):
 
     def play(self):
-        pass
+        print("Lets just try and get to the show, dude")
 
 class WinTickets(Chapter):
 
-    tickets = ["You put an add on craigslist.... withing minutes someone responds. Excitedly, you rush to meet them.... only to get knocked out and robbed. Don't be such a dumbass.", "Well you're absolutely no fun...... why did you even bother playing at all??", "There is no point to this game is you value money over expieriences, pal"]
+    tickets = ["You put an add on craigslist.... withing minutes someone responds. Excitedly, you rush to meet them.... only to get knocked out and robbed. Don't be such a dumbass.",
+               "Well you're absolutely no fun...... why did you even bother playing at all??",
+               "There is no point to this game if you value money over expieriences, pal"]
 
 
     def play(self):
@@ -48,7 +50,9 @@ class WinTickets(Chapter):
 
 class Bar(Chapter):
 
-    oof = ["Why am I so cold?... you ask yourself as you slowly come too.... floating in a tub of ice... Why does my side hurt? Where are my clothes???? You look down, and see the sutures accross your abdomin.....MY MOTHER F_ING KIDNEY!!!", "What time is it?? Your head is pounding, its pitch black, and something smells awful. Fumbling, you feel around, and realize youre in some sort of padded cell. The hall lights ouside the door come on, illumnating the room. You wish it would not have. UnSaNiTaRy. Looking through the porthole sized window in the door, you can read a small sign.... ARKHAM INSANE ASYLUM.....................well fuck.", "JUST VAT DO YOU TINK YOU'RE DOINGK? You look over your shoulder...... the rest of the bar has been completely blocked by some giant mass..... like a wall. You trace the outline and realize..... That's no wall. THATS A MAN!!!Katia snickers.... 'Oh, Ivan, this guy was givingk me such a hardt time!'......Right before you feel your spirit leave your body..... you regret every life decision up until this point"]
+    oof = ["Why am I so cold?... you ask yourself as you slowly come too.... floating in a tub of ice... Why does my side hurt? Where are my clothes???? You look down, and see the sutures accross your abdomin.....MY MOTHER F_ING KIDNEY!!!",
+           "What time is it?? Your head is pounding, its pitch black, and something smells awful. Fumbling, you feel around, and realize youre in some sort of padded cell. The hall lights ouside the door come on, illumnating the room. You wish it would not have. UnSaNiTaRy. Looking through the porthole sized window in the door, you can read a small sign.... ARKHAM INSANE ASYLUM.....................well fuck.",
+           "JUST VAT DO YOU TINK YOU'RE DOINGK? You look over your shoulder...... the rest of the bar has been completely blocked by some giant mass..... like a wall. You trace the outline and realize..... That's no wall. THATS A MAN!!!Katia snickers.... 'Oh, Ivan, this guy was givingk me such a hardt time!'......Right before you feel your spirit leave your body..... you regret every life decision up until this point"]
 
     def play(self):
         print(dedent("""
@@ -141,7 +145,9 @@ class HaveDrink(Chapter):
 
 class InLine(Chapter):
 
-    trip = ["Have you ever heard colors??? Well, you're about too...", "Ummm..... Kate, why is your face melting?", "I AM A GOLDEN GOD!!!!!"]
+    trip = ["Have you ever heard colors??? Well, you're about too...",
+            "Ummm..... Kate, why is your face melting?",
+            "I AM A GOLDEN GOD!!!!!"]
 
     def play(self):
         print(dedent("""
@@ -166,7 +172,7 @@ class InLine(Chapter):
                          DON'T DO THE MYSTERY WEEDS, KIDS"""))
             exit(1)
         else:
-            print()
+            print("JUST SAY NO TO THE MYSTERY WEEDS, MAN!!!!!!!!")
             return 'concert'
 
 class Concert(Chapter):
@@ -175,7 +181,7 @@ class Concert(Chapter):
         print(dedent("""
                      ****************************************************************
                      ****************************************************************
-                     
+
                      HELLS TO THE FRICKING YEAH!!!!!!!
 
                      You made it in.... Kate pushed you through to the front....
